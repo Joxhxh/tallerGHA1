@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso de Estudio CI/CD: Nubank</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Caso de Estudio CI/CD: Nubank</h1>
+        <p>Implementación de integración y entrega continua a gran escala</p>
+    </header>
+
+    <div class="container">
+        
+        <section>
+            <h2>Descripción de la empresa</h2>
+            <p>Nubank es una fintech latinoamericana fundada en 2013 en São Paulo, Brasil[cite: 1]. A través de una plataforma 100% digital, ofrece tarjetas de crédito, cuentas digitales, préstamos y más, atendiendo actualmente a más de 100 millones de clientes en Brasil, México y Colombia[cite: 1].</p>
+        </section>
+        
+        <section>
+            <h2>¿Por qué implementar CI/CD?</h2>
+            <p>El objetivo principal fue sostener decenas de despliegues diarios sobre miles de microservicios sin sacrificar la estabilidad ni la seguridad exigidas a una institución financiera regulada[cite: 1]. Esto se logró mediante integración continua, pruebas automatizadas y entrega continua con despliegues incrementales y reversibles[cite: 1].</p>
+        </section>
+        
+        <section>
+            <h2>Estrategia y Logros Principales</h2>
+            <ul>
+                <li>Migración desde una infraestructura concentrada ("Pangea") hacia una arquitectura de múltiples cuentas de AWS por dominio, reduciendo el radio de explosión[cite: 1].</li>
+                <li>Estandarización de lenguajes, frameworks y plantillas de pipeline para que todo microservicio nuevo heredara automáticamente las prácticas de CI/CD[cite: 1].</li>
+                <li>Reducción del tiempo de creación de un nuevo microservicio productivo de semanas a horas[cite: 1].</li>
+                <li>Introducción de despliegues canary y rollouts controlados, liberando cambios a un pequeño porcentaje de tráfico antes de expandirlos al 100%[cite: 1].</li>
+                <li>Implementación de feature flags para desacoplar el despliegue del código del lanzamiento de funcionalidades[cite: 1].</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Estructura del Pipeline</h2>
+            <ul>
+                <li><strong>Control de versiones:</strong> Git, con revisión de código obligatoria antes de fusionar a la rama principal[cite: 1].</li>
+                <li><strong>Integración continua:</strong> Pipelines dinámicos que compilan el código, ejecutan pruebas automatizadas y análisis estático en cada commit[cite: 1].</li>
+                <li><strong>Empaquetado y orquestación:</strong> Contenedores Docker orquestados con Kubernetes sobre múltiples cuentas de AWS[cite: 1].</li>
+                <li><strong>Entrega progresiva:</strong> Despliegues canary y feature flags para activar funcionalidades de forma reversible[cite: 1].</li>
+                <li><strong>Observabilidad:</strong> Monitoreo continuo y alertas para detectar problemas antes de que impacten a los clientes[cite: 1].</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Taller 1 CI/CD - Proyecto GHA1</p>
+    </footer>
+
+</body>
+</html>
